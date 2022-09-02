@@ -1,0 +1,448 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background: linear-gradient(180deg, rgba(175,103,233,1) 31%, rgba(101,101,231,1) 100%);
+}
+
+h1,h5,p{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* mobile first */
+
+.card-container{
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 90%;
+    border-radius: 20px;
+    margin-top: 3rem;
+    -webkit-box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+    -moz-box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+    box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+}
+
+.image-container{
+    position: relative;
+    width: 100%;
+    height: 130px;
+}
+
+.mobileImg, .shadow{
+    position: absolute;
+    top: -110px;
+    left: 15%;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: auto;
+}
+
+.desktopImg, .desktopBox, .desktopShadow{
+    display: none;
+}
+
+.shadow{
+    position: absolute;
+    top: 0!important;
+    bottom: 0;
+    right: 0;
+}
+
+.content-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.content-container h1{
+    font-size: 2rem;
+}
+
+.accordion-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    width: 90%;
+}
+
+.accordion{
+    padding-top: 1rem;
+    width: 100%;
+}
+
+.accordion-text{
+    display: none;
+    font-size: 12px;
+    color: hsl(237, 12%, 33%);
+    padding-bottom: 1rem;
+    line-height: 1.2rem;
+}
+
+.text-active{
+    display: block;
+}
+
+.wrapper{
+    display: flex;
+}
+
+.wrapper h5{
+    width: 90%;
+    padding-bottom: 1rem;
+    color: hsl(237, 12%, 33%);
+    font-weight: lighter;
+}
+
+.active{
+    font-weight: 900!important;
+}
+
+.arrow{
+    margin-top: 0.3rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.arrow-active{
+    transform: rotate(180deg);
+}
+
+.divider{
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    width: 98%;
+    align-self: flex-start;
+    background-color: hsl(240, 5%, 91%);
+}
+
+
+@media (min-width: 1440px) and (max-width:1919px){
+    .card-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        background-color: white;
+        width: 70%;
+        border-radius: 20px;
+        margin-top: 3rem;
+        -webkit-box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+        -moz-box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+        box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+        overflow: hidden;
+    }
+
+    .image-container, .content-container{
+        flex: 1;
+    }
+
+    .image-container{
+        min-height: 397px;
+        width: 100%;
+    }
+
+    .mobileImg, .shadow{
+        display: none;
+    }
+
+    .desktopImg{
+        display: block;
+        position: absolute;
+        top: 5%;
+        bottom: 0;
+        right: 0;
+        left: -17%;
+        z-index: 1;
+    }
+
+    .desktopBox{
+        display: block;
+        position: fixed;
+        top: 47%;
+        bottom: 0;
+        left: 8.5%;
+        z-index: 2;
+    }
+
+    .desktopShadow{
+        display: block;
+        position: absolute;
+        top: -85%;
+        bottom: 0;
+        right: 0;
+        left: -115%;
+        z-index: 0;
+    }
+
+    .content-container{
+        height: 100%;
+        justify-content: center;
+    }
+
+    h1{
+        width: 90%;
+        padding-top: 3rem;
+    }
+
+}
+
+@media (min-width: 1920px) and (max-width:2500px){
+
+    .card-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        background-color: white;
+        width: 70%;
+        height: 60%;
+        border-radius: 20px;
+        margin-top: 3rem;
+        -webkit-box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+        -moz-box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+        box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+        overflow: hidden;
+    }
+
+    .mobileImg, .shadow{
+        display: none;
+    }
+
+    .desktopImg{
+        display: block;
+        position: absolute;
+        top: 20%;
+        bottom: 0;
+        right: 0;
+        left: -12.5%;
+        z-index: 1;
+        width:708px!important; 
+        height:539px!important;
+        max-width: 100%;
+    }
+
+    .desktopBox{
+        display: block;
+        position: fixed;
+        top: 48.5%;
+        bottom: 0;
+        left: 10%;
+        z-index: 2;
+    }
+
+    .desktopShadow{
+        display: block;
+        position: absolute;
+        top: -43%;
+        bottom: 0;
+        right: 0;
+        left: -86%;
+        z-index: 0;
+    }
+
+    .image-container{
+        height: 100%;
+        width: 100%;
+    }
+
+    .content-container{
+        height: 100%;
+        justify-content: center;
+    }
+
+    h1{
+        width: 90%;
+    }
+
+    h1,h5{
+        font-size: 1.2rem;
+    }
+
+    .accordion-container{
+        padding-bottom: 1rem;
+    }
+    
+    .accordion-text{
+        width: 90%;
+        font-size: 16px;
+        line-height: 1.3rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width:1439px){
+    .card-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        background-color: white;
+        width: 80%;
+        border-radius: 20px;
+        margin-top: 3rem;
+        -webkit-box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+        -moz-box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+        box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+        overflow: hidden;
+    }
+
+    .image-container, .content-container{
+        flex: 1;
+    }
+
+    .image-container{
+        min-height: 349px;
+        width: 100%;
+    }
+
+    .mobileImg, .shadow{
+        display: none;
+    }
+
+    .desktopImg{
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: -21%;
+        z-index: 1;
+    }
+
+    .desktopBox{
+        display: block;
+        position: fixed;
+        top: 47%;
+        bottom: 0;
+        left: 0.8%;
+        z-index: 2;
+    }
+
+    .desktopShadow{
+        display: block;
+        position: absolute;
+        top: -50%;
+        bottom: 0;
+        right: 0;
+        left: -141%;
+        z-index: 0;
+    }
+
+    .content-container{
+        height: 100%;
+        justify-content: center;
+    }
+
+    .accordion-container{
+        padding-right: 3rem;
+    }
+
+    h1{
+        width: 90%;
+        padding-top: 3rem;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width:1023px){
+    .card-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        background-color: white;
+        width: 80%;
+        border-radius: 20px;
+        margin-top: 3rem;
+        -webkit-box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+        -moz-box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+        box-shadow: 0px 50px 22px -29px rgba(79,79,79,0.59);
+        overflow: hidden;
+    }
+
+    .image-container, .content-container{
+        flex: 1;
+    }
+
+    .image-container{
+        min-height: 100%;
+        width: 100%;
+    }
+
+    .mobileImg, .shadow{
+        display: none;
+    }
+
+    .desktopImg{
+        display: block;
+        position: absolute;
+        top: -70%;
+        bottom: 0;
+        right: 0;
+        left: -51%;
+        z-index: 1;
+    }
+
+    .desktopShadow{
+        display: block;
+        position: absolute;
+        top: -370%;
+        bottom: 0;
+        right: 0;
+        left: -211%;
+        z-index: 0;
+    }
+
+    .content-container{
+        height: 100%;
+        justify-content: center;
+        padding: 1rem 0 1rem 0;
+    }
+
+    .accordion-container{
+        padding-right: 3rem;
+        padding-top: .5rem;
+        padding-bottom: 0;
+    }
+
+    h1{
+        width: 90%;
+        font-size: 24px!important;
+    }
+
+    .accordion{
+        padding-top: .5rem;
+    }
+
+    .wrapper h5{
+        font-size: 12px;
+    }
+
+    .accordion-text{
+        line-height: 1rem;
+        padding-bottom: .5rem;
+    }
+
+}
+
+
+
